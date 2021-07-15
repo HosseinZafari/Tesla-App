@@ -4,24 +4,36 @@ import TeslaButton from '../TeslaButton';
 import styles from './styles';
 
 const CarItem = (props) => {
+
+    const {title , subTitle , cta , image } = props;
+
     return (
         <View style={styles.carContainer}>
-                <ImageBackground style={styles.image} source={require('../../assets/images/ModelS.jpeg')}/>
+                <ImageBackground style={styles.image} source={image}/>
                 <View style={styles.titles}>
-                    <Text style={styles.title}>Model S</Text>
-                    <Text style={styles.subTitle}>Starting at $69.420</Text>
+
+                    <Text style={styles.title}>{title}</Text>
+
+                    <Text style={styles.subTitle}>
+                        {subTitle}&nbsp;
+                        <Text style={styles.cta}>
+                            {cta}
+                        </Text>
+                    </Text>
                 </View>
 
-                <TeslaButton 
-                    content={'custom order'} 
-                    onClick={() => console.warn('button clicked!')}
-                />
+                <View style={styles.buttonContainer}>
+                    <TeslaButton 
+                        content={'custom order'} 
+                        onClick={() => console.warn('button clicked!')}
+                    />
 
-                <TeslaButton
-                    type={'secondary'} 
-                    content={'Exsiting Enventory'}
-                    onClick={() => console.warn('button clicked!')}
-                />
+                    <TeslaButton
+                        type={'secondary'} 
+                        content={'Exsiting Enventory'}
+                        onClick={() => console.warn('button clicked!')}
+                    />
+                </View>
         </View> 
     );
 }

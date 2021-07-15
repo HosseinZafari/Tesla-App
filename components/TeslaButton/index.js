@@ -3,8 +3,8 @@ import { View , Text, Pressable} from 'react-native';
 import styles from './styles';
 
 const TeslaButton = (props) => { 
-    const backgroundColor = props.type === 'secondary' ? '#FFF' : '#171A2CC';
-    const textColor       = props.type === 'secondary' ? '#171A2CC' : '#FFF'; 
+    const backgroundColor = props.type === 'secondary' ? '#FFF' : '#171A20CC';
+    const textColor       = props.type === 'secondary' ? '#171A20CC' : '#FFF'; 
 
     return (
         <View style={styles.container}>
